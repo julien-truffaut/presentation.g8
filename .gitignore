@@ -1,0 +1,20 @@
+## IntelliJ files to ignore
+*.iml
+*.iws
+*.ipr
+.idea
+.idea/*
+
+## NetBeans files to ignore
+.*_nb
+
+# bench output
+*.csv
+
+## scala specific files to ignore
+*.class
+target/
+project/project/
+benchData/
+_site/
+tut-out/
