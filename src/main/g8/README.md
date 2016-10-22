@@ -9,7 +9,7 @@ All code in `core` module is accessible in your slides
 
 
 
-This project was generated using [Giter8][g8] with template [presentation.g8][]
+This project was generated using [Giter8][g8] with template [presentation.g8][presentation.g8]
 
 
 [g8]: http://www.foundweekends.org/giter8/
