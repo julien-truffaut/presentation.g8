@@ -14,8 +14,7 @@ lazy val baseSettings: Seq[Setting[_]] = Seq(
     "-Ywarn-value-discard",
     "-Xfuture"
   ),
-  resolvers += Resolver.sonatypeRepo("releases"),
-  addCompilerPlugin("org.spire-math" %% "kind-projector" % "$kind_projector_version$")
+  resolvers += Resolver.sonatypeRepo("releases")
 )
 
 lazy val $name$ = project.in(file("."))
