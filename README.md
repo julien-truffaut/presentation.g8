@@ -2,6 +2,12 @@ A [Giter8][g8] template for presentation using [remark.js][remark.js] and [tut][
 
 ## Setup
 
+if you have sbt 0.13.13 or higher:
+
+`sbt new julien-truffaut/presentation.g8`
+
+otherwise:
+
 1. Install [Giter8][g8]
 2. run `g8 julien-truffaut/presentation.g8` and follow the wizard instructions
 3. read the `README.md` of the generated project for instructions how to compile the presentation
