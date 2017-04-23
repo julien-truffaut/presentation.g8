@@ -34,5 +34,6 @@ lazy val slides = project
   .settings(tutSettings: _*)
   .settings(
     tutSourceDirectory := baseDirectory.value / "tut",
-    tutTargetDirectory := baseDirectory.value / "tut-out"
+    tutTargetDirectory := baseDirectory.value / "tut-out",
+    watchSources ++= (tutSourceDirectory.value ** "*.html").get
   ).dependsOn(core)
