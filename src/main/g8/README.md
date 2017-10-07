@@ -1,11 +1,19 @@
 # $title$
 
-Raw slides are in `slides/tut/slides.html`
+Code in `core` module is accessible in your slides
 
-run `sbt slides/tut` to compile slides using [tut][tut] at `slides/tut-out/slides.html`
+Raw slides are in `slides/tut/index.html`
 
-All code in `core` module is accessible in your slides
+### How to compile slides
 
+run `sbt slides/tut` to compile slides using [tut][tut]. 
+You can then view the slides by opening `docs/index.html` in your browser.
+
+### How to publish slides with github
+
+When you are ready push the repository to github (including the compiled slides in `docs`).
+Then go to project settings -> GitHub Pages and select `master branch /docs folder` for 
+the source of github pages.
 
 
 

@@ -31,9 +31,9 @@ lazy val core = project
 lazy val slides = project
   .settings(moduleName := "$name$-slides")
   .settings(baseSettings: _*)
-  .settings(tutSettings: _*)
   .settings(
     tutSourceDirectory := baseDirectory.value / "tut",
-    tutTargetDirectory := baseDirectory.value / "tut-out",
+    tutTargetDirectory := baseDirectory.value / "../docs",
     watchSources ++= (tutSourceDirectory.value ** "*.html").get
   ).dependsOn(core)
+  .enablePlugins(TutPlugin)
