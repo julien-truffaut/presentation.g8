@@ -7,7 +7,6 @@ lazy val baseSettings: Seq[Setting[_]] = Seq(
     "-language:higherKinds",
     "-language:implicitConversions", "-language:existentials",
     "-unchecked",
-    "-Xfatal-warnings",
     "-Xlint",
     "-Yno-adapted-args",
     "-Ywarn-numeric-widen",
