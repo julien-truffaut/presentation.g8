@@ -1,0 +1,12 @@
+language: scala
+sudo: false
+script:
+  - sbt ";set g8Properties in g8 in Test ~= { _ ++ Map((\"scala_version\" -> \"$TRAVIS_SCALA_VERSION\"), (\"sbt_version\" -> \"$SBT_VERSION\")) }; g8Test"
+jdk: oraclejdk8
+matrix:
+  include:
+    - scala: 2.12.8
+      env: SBT_VERSION="1.2.8"
+    - jdk: openjdk11
+      scala: 2.12.8
+      env: SBT_VERSION="1.2.8"
