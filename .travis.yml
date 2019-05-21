@@ -1,12 +1,17 @@
 language: scala
-sudo: false
+
+cache:
+  directories:
+    - $HOME/.ivy2/cache
+    - $HOME/.sbt/boot/
+
+jdk:
+  - oraclejdk8
+
 script:
-  - sbt ";set g8Properties in g8 in Test ~= { _ ++ Map((\"scala_version\" -> \"$TRAVIS_SCALA_VERSION\"), (\"sbt_version\" -> \"$SBT_VERSION\")) }; g8Test"
-jdk: oraclejdk8
-matrix:
-  include:
-    - scala: 2.12.8
-      env: SBT_VERSION="1.2.8"
-    - jdk: openjdk11
-      scala: 2.12.8
-      env: SBT_VERSION="1.2.8"
+  ## This runs the template with the default parameters, and runs test within the templated app.
+  - sbt g8Test
+
+  ## Tricks to avoid unnecessary cache updates
+  - find $HOME/.sbt -name "*.lock" | xargs rm
+  - find $HOME/.ivy2 -name "ivydata-*.properties" | xargs rm
